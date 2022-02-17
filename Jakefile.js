@@ -63,10 +63,10 @@ var dirmode = 0755,
 		'php':
 			[
 				path.join(src, 'php', 'autoload.php'),
-				path.join(src, 'php', 'connector.minimal.php-dist'),
-				path.join(src, 'php', 'connector.maximal.php-dist'),
+				// path.join(src, 'php', 'connector.minimal.php-dist'),
+				// path.join(src, 'php', 'connector.maximal.php-dist'),
 				path.join(src, 'php', 'mime.types'),
-				path.join(src, 'php', 'MySQLStorage.sql'),
+				// path.join(src, 'php', 'MySQLStorage.sql'),
 				path.join(src, 'php', 'elFinderPlugin.php'),
 				path.join(src, 'php', 'elFinderSession.php'),
 				path.join(src, 'php', 'elFinderSessionInterface.php'),
@@ -79,26 +79,26 @@ var dirmode = 0755,
 			.concat(grep(path.join(src, 'php', 'resources'), '.+\..+$')),
 		'misc':
 			[
-				path.join(src, 'js', 'proxy', 'elFinderSupportVer1.js'),
-				path.join(src, 'Changelog'),
+				// path.join(src, 'js', 'proxy', 'elFinderSupportVer1.js'),
+				// path.join(src, 'Changelog'),
 				path.join(src, 'LICENSE.md'),
-				path.join(src, 'README.md'),
-				path.join(src, 'composer.json'),
-				path.join(src, 'elfinder.html'),
-				path.join(src, 'elfinder.legacy.html'),
-				path.join(src, 'main.default.js')
+				// path.join(src, 'README.md'),
+				// path.join(src, 'composer.json'),
+				// path.join(src, 'elfinder.html'),
+				// path.join(src, 'elfinder.legacy.html'),
+				// path.join(src, 'main.default.js')
 			]
 			.concat(grep(path.join(src, 'js', 'extras'), '\\.js$'))
 			.concat(grep(path.join(src, 'js', 'worker'), '\\.js$')),
 		'misc-minimal' :
 			[
-				path.join(src, 'js', 'proxy', 'elFinderSupportVer1.js'),
-				path.join(src, 'Changelog'),
+				// path.join(src, 'js', 'proxy', 'elFinderSupportVer1.js'),
+				// path.join(src, 'Changelog'),
 				path.join(src, 'LICENSE.md'),
-				path.join(src, 'README.md'),
-				path.join(src, 'composer.json'),
-				path.join(src, 'elfinder-minimal.html'),
-				path.join(src, 'main-minimal.default.js')
+				// path.join(src, 'README.md'),
+				// path.join(src, 'composer.json'),
+				// path.join(src, 'elfinder-minimal.html'),
+				// path.join(src, 'main-minimal.default.js')
 			]
 	};
 
