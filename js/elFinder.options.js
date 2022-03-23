@@ -10,7 +10,35 @@ elFinder.prototype._options = {
 	 * 
 	 * @type Object
 	 */
-	cdns : {
+	 cdns : {
+		// for editor etc.
+		ace        : './cdn/ace.min.js',
+		codemirror : './cdn/codemirror.min.js',
+		ckeditor   : './cdn/ckeditor.min.js',
+		ckeditor5  : './cdn/ckeditor5.js',
+		tinymce    : './cdn/tinymce.min.js',
+		simplemde  : './cdn/simplemde.min.js',
+		fabric     : './cdn/fabric.min.js',
+		fabric16   : './cdn/fabric-1.6.7.min.js',
+		tui        : './cdn/tui-code-snippet.min',
+		// for quicklook etc.
+		hls        : './cdn/hls.min.js',
+		dash       : './cdn/dash.all.min.js',
+		flv        : './cdn/flv.min.js',
+		videojs    : './cdn/video.js/7.12.1',
+		prettify   : './cdn/run_prettify.js',
+		psd        : './cdn/psd.min.js',
+		rar        : './cdn/rar.min.js',
+		zlibUnzip  : './cdn/unzip.min.js', // need check unzipFiles() in quicklook.plugins.js when update
+		zlibGunzip : './cdn/gunzip.min.js',
+		bzip2      : './cdn/bzip2.js',
+		marked     : './cdn/marked.min.js',
+		sparkmd5   : './cdn/spark-md5.min.js',
+		jssha      : './cdn/sha.min.js',
+		amr        : './cdn/amrnb.js',
+		tiff       : './cdn/tiff.min.js'
+	},
+	cdns2 : {
 		// for editor etc.
 		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12',
 		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.1',
