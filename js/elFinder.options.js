@@ -12,31 +12,31 @@ elFinder.prototype._options = {
 	 */
 	 cdns : {
 		// for editor etc.
-		ace        : './cdn/ace.min.js',
-		codemirror : './cdn/codemirror.min.js',
-		ckeditor   : './cdn/ckeditor.min.js',
+		ace        : './cdn/ace.js',
+		codemirror : './cdn/codemirror.js',
+		ckeditor   : './cdn/ckeditor.js',
 		ckeditor5  : './cdn/ckeditor5.js',
-		tinymce    : './cdn/tinymce.min.js',
-		simplemde  : './cdn/simplemde.min.js',
-		fabric     : './cdn/fabric.min.js',
-		fabric16   : './cdn/fabric-1.6.7.min.js',
-		tui        : './cdn/tui-code-snippet.min',
+		tinymce    : './cdn/tinymce.js',
+		simplemde  : './cdn/simplemde.js',
+		fabric     : './cdn/fabric.js',
+		fabric16   : './cdn/fabric-1.6.7.js',
+		tui        : './cdn/tui-code-snippet.js',
 		// for quicklook etc.
-		hls        : './cdn/hls.min.js',
-		dash       : './cdn/dash.all.min.js',
-		flv        : './cdn/flv.min.js',
+		hls        : './cdn/hls.js',
+		dash       : './cdn/dash.all.js',
+		flv        : './cdn/flv.js',
 		videojs    : './cdn/video.js/7.12.1',
 		prettify   : './cdn/run_prettify.js',
-		psd        : './cdn/psd.min.js',
-		rar        : './cdn/rar.min.js',
-		zlibUnzip  : './cdn/unzip.min.js', // need check unzipFiles() in quicklook.plugins.js when update
-		zlibGunzip : './cdn/gunzip.min.js',
+		psd        : './cdn/psd.js',
+		rar        : './cdn/rar.js',
+		zlibUnzip  : './cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
+		zlibGunzip : './cdn/gunzip.js',
 		bzip2      : './cdn/bzip2.js',
-		marked     : './cdn/marked.min.js',
-		sparkmd5   : './cdn/spark-md5.min.js',
-		jssha      : './cdn/sha.min.js',
+		marked     : './cdn/marked.js',
+		sparkmd5   : './cdn/spark-md5.js',
+		jssha      : './cdn/sha.js',
 		amr        : './cdn/amrnb.js',
-		tiff       : './cdn/tiff.min.js'
+		tiff       : './cdn/tiff.js'
 	},
 	cdns2 : {
 		// for editor etc.
