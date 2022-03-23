@@ -4,9 +4,7 @@
   "main": "Jakefile.js",
   "scripts": {
     "build": "mkdir -p ./build && jake -C ./build elfinder",
-    "build-win": "mkdir .\\build && jake -C .\\build elfinder",
     "plugin-build": "mkdir -p ../../../elFinder && jake -C ../../../elFinder elfinder",
-    "plugin-build-win": "mkdir ..\\..\\..\\elFinder && jake -C ..\\..\\..\\elFinder elfinder"
   },
   "repository": {
     "type": "git",
@@ -28,6 +26,7 @@
   },
   "homepage": "http://studio-42.github.io/elFinder/",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "csso": "<2.0.0",
     "jake": "~8.0.12",
     "uglify-js": "~2.6.2"
