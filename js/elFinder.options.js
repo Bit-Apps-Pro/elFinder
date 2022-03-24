@@ -12,59 +12,31 @@ elFinder.prototype._options = {
 	 */
 	 cdns : {
 		// for editor etc.
-		ace        : './cdn/ace.js',
-		codemirror : './cdn/codemirror.js',
-		ckeditor   : './cdn/ckeditor.js',
-		ckeditor5  : './cdn/ckeditor5.js',
-		tinymce    : './cdn/tinymce.js',
-		simplemde  : './cdn/simplemde.js',
-		fabric     : './cdn/fabric.js',
-		fabric16   : './cdn/fabric-1.6.7.js',
-		tui        : './cdn/tui-code-snippet.js',
+		ace        : elf.js_url+'cdn/ace.js',
+		codemirror : elf.js_url+'cdn/codemirror.js',
+		ckeditor   : elf.js_url+'cdn/ckeditor.js',
+		ckeditor5  : elf.js_url+'cdn/ckeditor5.js',
+		tinymce    : elf.js_url+'cdn/tinymce.js',
+		simplemde  : elf.js_url+'cdn/simplemde.js',
+		fabric     : elf.js_url+'cdn/fabric.js',
+		fabric16   : elf.js_url+'cdn/fabric-1.6.7.js',
+		tui        : elf.js_url+'cdn/tui-code-snippet.js',
 		// for quicklook etc.
-		hls        : './cdn/hls.js',
-		dash       : './cdn/dash.all.js',
-		flv        : './cdn/flv.js',
-		videojs    : './cdn/video.js/7.12.1',
-		prettify   : './cdn/run_prettify.js',
-		psd        : './cdn/psd.js',
-		rar        : './cdn/rar.js',
-		zlibUnzip  : './cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
-		zlibGunzip : './cdn/gunzip.js',
-		bzip2      : './cdn/bzip2.js',
-		marked     : './cdn/marked.js',
-		sparkmd5   : './cdn/spark-md5.js',
-		jssha      : './cdn/sha.js',
-		amr        : './cdn/amrnb.js',
-		tiff       : './cdn/tiff.js'
-	},
-	cdns2 : {
-		// for editor etc.
-		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12',
-		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.1',
-		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.16.1',
-		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/28.0.0',
-		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.7.1',
-		simplemde  : 'https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2',
-		fabric     : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0',
-		fabric16   : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7',
-		tui        : 'https://uicdn.toast.com',
-		// for quicklook etc.
-		hls        : 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.0.2/hls.min.js',
-		dash       : 'https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.2.2/dash.all.min.js',
-		flv        : 'https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js',
-		videojs    : 'https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.1',
-		prettify   : 'https://cdn.jsdelivr.net/gh/google/code-prettify@f1c3473acd1e8ea8c8c1a60c56e89f5cdd06f915/loader/run_prettify.js',
-		psd        : 'https://cdnjs.cloudflare.com/ajax/libs/psd.js/3.2.0/psd.min.js',
-		rar        : 'https://cdn.jsdelivr.net/gh/nao-pon/rar.js@6cef13ec66dd67992fc7f3ea22f132d770ebaf8b/rar.min.js',
-		zlibUnzip  : 'https://cdn.jsdelivr.net/gh/imaya/zlib.js@0.3.1/bin/unzip.min.js', // need check unzipFiles() in quicklook.plugins.js when update
-		zlibGunzip : 'https://cdn.jsdelivr.net/gh/imaya/zlib.js@0.3.1/bin/gunzip.min.js',
-		bzip2      : 'https://cdn.jsdelivr.net/gh/nao-pon/bzip2.js@0.8.0/bzip2.js',
-		marked     : 'https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js',
-		sparkmd5   : 'https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.0/spark-md5.min.js',
-		jssha      : 'https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.min.js',
-		amr        : 'https://cdn.jsdelivr.net/gh/yxl/opencore-amr-js@dcf3d2b5f384a1d9ded2a54e4c137a81747b222b/js/amrnb.js',
-		tiff       : 'https://cdn.jsdelivr.net/gh/seikichi/tiff.js@545ede3ee46b5a5bc5f06d65954e775aa2a64017/tiff.min.js'
+		hls        : elf.js_url+'cdn/hls.js',
+		dash       : elf.js_url+'cdn/dash.all.js',
+		flv        : elf.js_url+'cdn/flv.js',
+		videojs    : elf.js_url+'cdn/video.js/7.12.1',
+		prettify   : elf.js_url+'cdn/run_prettify.js',
+		psd        : elf.js_url+'cdn/psd.js',
+		rar        : elf.js_url+'cdn/rar.js',
+		zlibUnzip  : elf.js_url+'cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
+		zlibGunzip : elf.js_url+'cdn/gunzip.js',
+		bzip2      : elf.js_url+'cdn/bzip2.js',
+		marked     : elf.js_url+'cdn/marked.js',
+		sparkmd5   : elf.js_url+'cdn/spark-md5.js',
+		jssha      : elf.js_url+'cdn/sha.js',
+		amr        : elf.js_url+'cdn/amrnb.js',
+		tiff       : elf.js_url+'cdn/tiff.js'
 	},
 	
 	/**
