@@ -1131,7 +1131,7 @@ var elFinder = function(elm, opts, bootCallback) {
 				self.options.baseUrl = baseUrl;
 			} else {
 				if (! self.options.baseUrl) {
-					self.options.baseUrl = './';
+					self.options.baseUrl = fm.elfinder; // elfinder main folder url.
 				}
 				baseUrl = self.options.baseUrl;
 			}
@@ -1201,7 +1201,7 @@ var elFinder = function(elm, opts, bootCallback) {
 				node.addClass('elfinder')
 					.data('cssautoloadHide', $('<style>.elfinder{visibility:hidden;overflow:hidden}</style>'));
 				$('head').append(node.data('cssautoloadHide'));
-
+				
 				// set default theme
 				if (!self.options.themes.default) {
 					self.options.themes = Object.assign({
@@ -4903,7 +4903,7 @@ var elFinder = function(elm, opts, bootCallback) {
 
 	// auto load language file
 	dfrdsBeforeBootup.push((function() {
-		var lang   = self.lang,
+		var lang   = (self.lang)? self.lang: 'en',
 			langJs = self.i18nBaseUrl + 'elfinder.' + lang + '.js',
 			dfd    = $.Deferred().done(function() {
 				if (self.i18[lang]) {
