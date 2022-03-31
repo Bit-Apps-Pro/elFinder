@@ -70,7 +70,6 @@ var dirmode = 0755,
 				path.join(src, 'php', 'elFinderPlugin.php'),
 				path.join(src, 'php', 'elFinderSession.php'),
 				path.join(src, 'php', 'elFinderSessionInterface.php'),
-				path.join(src, 'php', '.tmp', '.htaccess'),
 				path.join(src, 'php', 'editors', 'editor.php')
 			]
 			.concat(grep(path.join(src, 'php'), '\\.class\\.php$'))
@@ -204,8 +203,7 @@ task('prebuild', function(){
 	var dir = ['css', 'js', 'img', 'sounds',
 			path.join('js', 'i18n'), path.join('js', 'i18n', 'help'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'proxy'), path.join('js', 'worker'), path.join('js', 'cdn'),
 			'php',
-			path.join('php', '.tmp'), path.join('php', 'libs'), path.join('php', 'resources'),
-			'files', path.join('files', '.trash')],
+			path.join('php', 'libs'), path.join('php', 'resources')],
 		i;
 	if (editors.length) {
 		dir.push(path.join('php', 'editors'));
@@ -372,9 +370,7 @@ task('misc', function(){
 		.concat(files['i18n'])
 		.concat(path.join(src, 'css', 'theme.css'))
 		.concat(files['php'])
-		.concat(files['misc'])
-		.concat(path.join(src, 'files', '.gitignore'))
-		.concat(path.join(src, 'files', '.trash', '.gitignore'));
+		.concat(files['misc']);
 	for (i in cf)
 	{
 		var dst = cf[i].replace(src, '').substr(1);
@@ -400,9 +396,7 @@ task('misc-minimal', function(){
 		.concat(files['i18n'])
 		.concat(path.join(src, 'css', 'theme.css'))
 		.concat(files['php'])
-		.concat(files['misc-minimal'])
-		.concat(path.join(src, 'files', '.gitignore'))
-		.concat(path.join(src, 'files', '.trash', '.gitignore'));
+		.concat(files['misc-minimal']);
 	for (i in cf)
 	{
 		var dst = cf[i].replace(src, '').substr(1);
@@ -446,12 +440,10 @@ task('clean', function(){
 		uf = uf
 			.concat(grep('./'))
 			.concat(grep('css'))
-			.concat(grep('files'))
 			.concat(grep('img'))
 			.concat(grep('js'))
 			.concat(grep('php'))
 			.concat(grep('sounds'));
-		uf = [].concat.apply(uf, grep('files').map(function(d) { return grep(d); }));
 		uf = [].concat.apply(uf, grep('js').map(function(d) { return grep(d); }));
 		uf = [].concat.apply(uf, grep(path.join('js', 'i18n')).map(function(d) { return grep(d); }));
 		uf = [].concat.apply(uf, grep('php').map(function(d) { return grep(d); }));
@@ -470,9 +462,9 @@ task('clean', function(){
 	// }
 	if (src != path.resolve()) {
 		var ud = [
-			'css', 'img', 'sounds', path.join('files', '.trash'), 'files',
+			'css', 'img', 'sounds',
 			path.join('js', 'proxy'), path.join('js', 'i18n', 'help'), path.join('js', 'i18n'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'cdn'), 'js',
-			path.join('php', '.tmp'), path.join('php', 'libs'), path.join('php', 'resources')]
+			path.join('php', 'libs'), path.join('php', 'resources')]
 			.concat(grep(path.join('php', 'editors')))
 			.concat(grep(path.join('php', 'plugins')))
 			.concat([path.join('php', 'editors'), path.join('php', 'plugins'), 'php']);
@@ -502,7 +494,6 @@ task('prepack', function(){
 		fls.push(path.join('css', 'elfinder.min.css'));
 		fls.push(path.join('css', 'theme.css'));
 		fls.push(path.join('js', 'elfinder.min.js'));
-		fls.push('files');
 		console.log('Including next files into release:');
 		console.log(fls);
 		this.packageFiles.items = fls;
