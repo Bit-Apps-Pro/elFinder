@@ -94,6 +94,7 @@ var dirmode = 0755,
 			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'addon'), '\\.js$'))
 			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode'), '\\.js$'))
 			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode', 'javascript'), '\\.js$'))
+			.concat(grep(path.join(src, 'js', 'cdn', 'ace'), '\\.js$'))
 			,
 		'misc-minimal' :
 			[
@@ -210,6 +211,7 @@ task('prebuild', function(){
 			path.join('js', 'cdn', 'codemirror', 'addon'),
 			path.join('js', 'cdn', 'codemirror', 'mode'),
 			path.join('js', 'cdn', 'codemirror', 'mode', 'javascript'),
+			path.join('js', 'cdn', 'ace'),
 			'php',
 			path.join('php', 'libs'), path.join('php', 'resources')],
 		i;
