@@ -1225,7 +1225,7 @@
 							cmUrl + '/codemirror.min.js'
 						], function() {
 							self.fm.loadScript([
-								cmUrl + '/addon/loadmode.min.js',
+								cmUrl + '/addon/mode/loadmode.min.js',
 								cmUrl + '/mode/meta.min.js'
 							], function() {
 								self.confObj.loader.resolve(CodeMirror);

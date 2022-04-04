@@ -10,33 +10,62 @@ elFinder.prototype._options = {
 	 * 
 	 * @type Object
 	 */
+	// cdns : {
+	// 	// for editor etc.
+	// 	ace        : fm.js_url+'cdn/ace',
+	// 	codemirror : fm.js_url+'cdn/codemirror',
+	// 	ckeditor   : fm.js_url+'cdn/ckeditor.js',
+	// 	ckeditor5  : fm.js_url+'cdn/ckeditor5.js',
+	// 	tinymce    : fm.js_url+'cdn/tinymce.js',
+	// 	simplemde  : fm.js_url+'cdn/simplemde.js',
+	// 	fabric     : fm.js_url+'cdn/fabric.js',
+	// 	fabric16   : fm.js_url+'cdn/fabric-1.6.7.js',
+	// 	tui        : fm.js_url+'cdn/tui-code-snippet.js',
+	// 	// for quicklook etc.
+	// 	hls        : fm.js_url+'cdn/hls.js',
+	// 	dash       : fm.js_url+'cdn/dash.all.js',
+	// 	flv        : fm.js_url+'cdn/flv.js',
+	// 	videojs    : fm.js_url+'cdn/video.js/7.12.1',
+	// 	prettify   : fm.js_url+'cdn/run_prettify.js',
+	// 	psd        : fm.js_url+'cdn/psd.js',
+	// 	rar        : fm.js_url+'cdn/rar.js',
+	// 	zlibUnzip  : fm.js_url+'cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
+	// 	zlibGunzip : fm.js_url+'cdn/gunzip.js',
+	// 	bzip2      : fm.js_url+'cdn/bzip2.js',
+	// 	marked     : fm.js_url+'cdn/marked.js',
+	// 	sparkmd5   : fm.js_url+'cdn/spark-md5.js',
+	// 	jssha      : fm.js_url+'cdn/sha.js',
+	// 	amr        : fm.js_url+'cdn/amrnb.js',
+	// 	tiff       : fm.js_url+'cdn/tiff.js'
+	// },
+
 	cdns : {
 		// for editor etc.
-		ace        : fm.js_url+'cdn/ace',
-		codemirror : fm.js_url+'cdn/codemirror',
-		ckeditor   : fm.js_url+'cdn/ckeditor.js',
-		ckeditor5  : fm.js_url+'cdn/ckeditor5.js',
-		tinymce    : fm.js_url+'cdn/tinymce.js',
-		simplemde  : fm.js_url+'cdn/simplemde.js',
-		fabric     : fm.js_url+'cdn/fabric.js',
-		fabric16   : fm.js_url+'cdn/fabric-1.6.7.js',
-		tui        : fm.js_url+'cdn/tui-code-snippet.js',
+		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14',
+		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2',
+		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.17.2',
+		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/33.0.0',
+		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.0',
+		simplemde  : 'https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2',
+		fabric     : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0',
+		fabric16   : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7',
+		tui        : 'https://uicdn.toast.com',
 		// for quicklook etc.
-		hls        : fm.js_url+'cdn/hls.js',
-		dash       : fm.js_url+'cdn/dash.all.js',
-		flv        : fm.js_url+'cdn/flv.js',
-		videojs    : fm.js_url+'cdn/video.js/7.12.1',
-		prettify   : fm.js_url+'cdn/run_prettify.js',
-		psd        : fm.js_url+'cdn/psd.js',
-		rar        : fm.js_url+'cdn/rar.js',
-		zlibUnzip  : fm.js_url+'cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
-		zlibGunzip : fm.js_url+'cdn/gunzip.js',
-		bzip2      : fm.js_url+'cdn/bzip2.js',
-		marked     : fm.js_url+'cdn/marked.js',
-		sparkmd5   : fm.js_url+'cdn/spark-md5.js',
-		jssha      : fm.js_url+'cdn/sha.js',
-		amr        : fm.js_url+'cdn/amrnb.js',
-		tiff       : fm.js_url+'cdn/tiff.js'
+		hls        : 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.1.5/hls.min.js',
+		dash       : 'https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.3.0/dash.all.min.js',
+		flv        : 'https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.6.2/flv.min.js',
+		videojs    : 'https://cdnjs.cloudflare.com/ajax/libs/video.js/7.18.1',
+		prettify   : 'https://cdn.jsdelivr.net/gh/google/code-prettify@f1c3473acd1e8ea8c8c1a60c56e89f5cdd06f915/loader/run_prettify.js',
+		psd        : 'https://cdnjs.cloudflare.com/ajax/libs/psd.js/3.4.0/psd.min.js',
+		rar        : 'https://cdn.jsdelivr.net/gh/nao-pon/rar.js@6cef13ec66dd67992fc7f3ea22f132d770ebaf8b/rar.min.js',
+		zlibUnzip  : 'https://cdn.jsdelivr.net/gh/imaya/zlib.js@0.3.1/bin/unzip.min.js', // need check unzipFiles() in quicklook.plugins.js when update
+		zlibGunzip : 'https://cdn.jsdelivr.net/gh/imaya/zlib.js@0.3.1/bin/gunzip.min.js',
+		bzip2      : 'https://cdn.jsdelivr.net/gh/nao-pon/bzip2.js@0.8.0/bzip2.js',
+		marked     : 'https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js',
+		sparkmd5   : 'https://cdnjs.cloudflare.com/ajax/libs/spark-md5/3.0.0/spark-md5.min.js',
+		jssha      : 'https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.min.js',
+		amr        : 'https://cdn.jsdelivr.net/gh/yxl/opencore-amr-js@dcf3d2b5f384a1d9ded2a54e4c137a81747b222b/js/amrnb.js',
+		tiff       : 'https://cdn.jsdelivr.net/gh/seikichi/tiff.js@545ede3ee46b5a5bc5f06d65954e775aa2a64017/tiff.min.js'
 	},
 	
 	/**
