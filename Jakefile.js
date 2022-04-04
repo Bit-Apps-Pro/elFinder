@@ -89,7 +89,12 @@ var dirmode = 0755,
 			]
 			.concat(grep(path.join(src, 'js', 'extras'), '\\.js$'))
 			.concat(grep(path.join(src, 'js', 'worker'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn'), '\\.js$')),
+			.concat(grep(path.join(src, 'js', 'cdn'), '\\.js$'))
+			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror'), '.+\..+$'))
+			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'addon'), '\\.js$'))
+			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode'), '\\.js$'))
+			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode', 'javascript'), '\\.js$'))
+			,
 		'misc-minimal' :
 			[
 				// path.join(src, 'js', 'proxy', 'elFinderSupportVer1.js'),
@@ -201,7 +206,10 @@ task('prebuild', function(){
 	console.log('build dir:  ' + path.resolve());
 	console.log('src dir:    ' + src);
 	var dir = ['css', 'js', 'img', 'sounds',
-			path.join('js', 'i18n'), path.join('js', 'i18n', 'help'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'proxy'), path.join('js', 'worker'), path.join('js', 'cdn'),
+			path.join('js', 'i18n'), path.join('js', 'i18n', 'help'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'proxy'), path.join('js', 'worker'), path.join('js', 'cdn'), path.join('js', 'cdn', 'codemirror'),
+			path.join('js', 'cdn', 'codemirror', 'addon'),
+			path.join('js', 'cdn', 'codemirror', 'mode'),
+			path.join('js', 'cdn', 'codemirror', 'mode', 'javascript'),
 			'php',
 			path.join('php', 'libs'), path.join('php', 'resources')],
 		i;
@@ -463,7 +471,7 @@ task('clean', function(){
 	if (src != path.resolve()) {
 		var ud = [
 			'css', 'img', 'sounds',
-			path.join('js', 'proxy'), path.join('js', 'i18n', 'help'), path.join('js', 'i18n'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'cdn'), 'js',
+			path.join('js', 'proxy'), path.join('js', 'i18n', 'help'), path.join('js', 'i18n'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'cdn'),  path.join('js', 'cdn', 'codemirror'), 'js',
 			path.join('php', 'libs'), path.join('php', 'resources')]
 			.concat(grep(path.join('php', 'editors')))
 			.concat(grep(path.join('php', 'plugins')))

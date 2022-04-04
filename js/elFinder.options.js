@@ -13,7 +13,7 @@ elFinder.prototype._options = {
 	cdns : {
 		// for editor etc.
 		ace        : fm.js_url+'cdn',
-		codemirror : fm.js_url+'cdn/codemirror.js',
+		codemirror : fm.js_url+'cdn/codemirror',
 		ckeditor   : fm.js_url+'cdn/ckeditor.js',
 		ckeditor5  : fm.js_url+'cdn/ckeditor5.js',
 		tinymce    : fm.js_url+'cdn/tinymce.js',
