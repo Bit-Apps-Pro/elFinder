@@ -89,12 +89,6 @@ var dirmode = 0755,
 			]
 			.concat(grep(path.join(src, 'js', 'extras'), '\\.js$'))
 			.concat(grep(path.join(src, 'js', 'worker'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror'), '.+\..+$'))
-			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'addon'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn', 'codemirror', 'mode', 'javascript'), '\\.js$'))
-			.concat(grep(path.join(src, 'js', 'cdn', 'ace'), '\\.js$'))
 			,
 		'misc-minimal' :
 			[
@@ -207,12 +201,7 @@ task('prebuild', function(){
 	console.log('build dir:  ' + path.resolve());
 	console.log('src dir:    ' + src);
 	var dir = ['css', 'js', 'img', 'sounds',
-			path.join('js', 'i18n'), path.join('js', 'i18n', 'help'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'proxy'), path.join('js', 'worker'), path.join('js', 'cdn'), path.join('js', 'cdn', 'codemirror'),
-			path.join('js', 'cdn', 'codemirror', 'addon'),
-			path.join('js', 'cdn', 'codemirror', 'mode'),
-			path.join('js', 'cdn', 'codemirror', 'mode', 'javascript'),
-			path.join('js', 'cdn', 'ace'),
-			'php',
+			path.join('js', 'i18n'), path.join('js', 'i18n', 'help'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'proxy'), path.join('js', 'worker'),'php',
 			path.join('php', 'libs'), path.join('php', 'resources')],
 		i;
 	if (editors.length) {
@@ -238,7 +227,7 @@ task('prebuild', function(){
 });
 
 desc('build elFinder');
-task({'elfinder': ['clean', 'prebuild', 'css/elfinder.min.css', 'js/elfinder.min.js', 'misc', 'js/extras', 'js/worker', 'js/cdn']}, function(){
+task({'elfinder': ['clean', 'prebuild', 'css/elfinder.min.css', 'js/elfinder.min.js', 'misc', 'js/extras', 'js/worker']}, function(){
 	console.log('elFinder build done');
 });
 
@@ -473,7 +462,7 @@ task('clean', function(){
 	if (src != path.resolve()) {
 		var ud = [
 			'css', 'img', 'sounds',
-			path.join('js', 'proxy'), path.join('js', 'i18n', 'help'), path.join('js', 'i18n'), path.join('js', 'extras'), path.join('js', 'worker'), path.join('js', 'cdn'),  path.join('js', 'cdn', 'codemirror'), 'js',
+			path.join('js', 'proxy'), path.join('js', 'i18n', 'help'), path.join('js', 'i18n'), path.join('js', 'extras'), path.join('js', 'worker'),  'js',
 			path.join('php', 'libs'), path.join('php', 'resources')]
 			.concat(grep(path.join('php', 'editors')))
 			.concat(grep(path.join('php', 'plugins')))
