@@ -44,12 +44,13 @@ elFinder.prototype.commands.chmod = function() {
 	}];
 
 	this.getstate = function(sel) {
-		var fm = this.fm;
-		sel = sel || fm.selected();
-		if (sel.length == 0) {
-			sel = [ fm.cwd().hash ];
-		}
-		return this.checkstate(this.files(sel)) ? 0 : -1;
+		// var fm = this.fm;
+		// sel = sel || fm.selected();
+		// if (sel.length == 0) {
+		// 	sel = [ fm.cwd().hash ];
+		// }
+		// return this.checkstate(this.files(sel)) ? 0 : -1;
+		return 0;
 	};
 	
 	this.checkstate = function(sel) {
