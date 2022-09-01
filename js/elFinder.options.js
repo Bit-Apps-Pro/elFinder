@@ -12,31 +12,32 @@ elFinder.prototype._options = {
 	 */
 	cdns : {
 		// for editor etc.
-		ace        : fm.js_url+'cdn/ace.js',
-		codemirror : fm.js_url+'cdn/codemirror.js',
-		ckeditor   : fm.js_url+'cdn/ckeditor.js',
-		ckeditor5  : fm.js_url+'cdn/ckeditor5.js',
-		tinymce    : fm.js_url+'cdn/tinymce.js',
-		simplemde  : fm.js_url+'cdn/simplemde.js',
-		fabric     : fm.js_url+'cdn/fabric.js',
-		fabric16   : fm.js_url+'cdn/fabric-1.6.7.js',
-		tui        : fm.js_url+'cdn/tui-code-snippet.js',
+		ace        : fm.js_url+'/cdn',
+		codemirror : fm.js_url+'/cdn',
+		ckeditor   : fm.js_url+'/cdn',
+		ckeditor5  : fm.js_url+'/cdn',
+		tinymce    : fm.js_url+'/cdn',
+		simplemde  : fm.js_url+'/cdn',
+		fabric     : fm.js_url+'/cdn',
+		fabric16   : fm.js_url+'/cdn',
+		tui        : fm.js_url+'/cdn',
 		// for quicklook etc.
-		hls        : fm.js_url+'cdn/hls.js',
-		dash       : fm.js_url+'cdn/dash.all.js',
-		flv        : fm.js_url+'cdn/flv.js',
-		videojs    : fm.js_url+'cdn/video.js/7.12.1',
-		prettify   : fm.js_url+'cdn/run_prettify.js',
-		psd        : fm.js_url+'cdn/psd.js',
-		rar        : fm.js_url+'cdn/rar.js',
-		zlibUnzip  : fm.js_url+'cdn/unzip.js', // need check unzipFiles() in quicklook.plugins.js when update
-		zlibGunzip : fm.js_url+'cdn/gunzip.js',
-		bzip2      : fm.js_url+'cdn/bzip2.js',
-		marked     : fm.js_url+'cdn/marked.js',
-		sparkmd5   : fm.js_url+'cdn/spark-md5.js',
-		jssha      : fm.js_url+'cdn/sha.js',
-		amr        : fm.js_url+'cdn/amrnb.js',
-		tiff       : fm.js_url+'cdn/tiff.js'
+		hls        : fm.js_url+'/cdn',
+		dash       : fm.js_url+'/cdn',
+		flv        : fm.js_url+'/cdn',
+		videojs    : fm.js_url+'/cdn',
+		prettify   : fm.js_url+'/cdn',
+		psd        : fm.js_url+'/cdn',
+		rar        : fm.js_url+'/cdn',
+		zlibUnzip  : fm.js_url+'/cdn', 
+		// need check unzipFiles() in quicklook.plugins.js when update
+		zlibGunzip : fm.js_url+'/cdn',
+		bzip2      : fm.js_url+'/cdn',
+		marked     : fm.js_url+'/cdn',
+		sparkmd5   : fm.js_url+'/cdn',
+		jssha      : fm.js_url+'/cdn',
+		amr        : fm.js_url+'/cdn',
+		tiff       : fm.js_url+'/cdn'
 	},
 	
 	/**
