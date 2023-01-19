@@ -7,7 +7,9 @@
 	}
 }(function(elFinder) {
 	"use strict";
-	var $ = jQuery;
+	if (!$ && window.jQuery) {
+		$ = window.jQuery
+	}
 	var apps = {},
 		// get query of getfile
 		getfile = window.location.search.match(/getfile=([a-z]+)/),

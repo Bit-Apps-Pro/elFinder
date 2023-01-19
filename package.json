@@ -4,7 +4,7 @@
   "main": "Jakefile.js",
   "scripts": {
     "build": "mkdir -p ./build && jake -C ./build elfinder",
-    "plugin-build": "mkdir -p ../../../elFinder && jake -C ../../../elFinder elfinder"
+    "plugin-build": "mkdir -p ../../../libs/elFinder && jake -C ../../../libs/elFinder elfinder"
   },
   "repository": {
     "type": "git",
