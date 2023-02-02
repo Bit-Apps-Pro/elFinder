@@ -34,8 +34,8 @@ elFinder.prototype._options = {
 		zlibGunzip : fm.js_url+'/cdn',
 		bzip2      : fm.js_url+'/cdn',
 		marked     : fm.js_url+'/cdn',
-		sparkmd5   : fm.js_url+'/cdn',
-		jssha      : fm.js_url+'/cdn',
+		sparkmd5   : fm.js_url+'cdn/spark-md5.js',
+		jssha      : fm.js_url+'cdn/sha.js',
 		amr        : fm.js_url+'/cdn',
 		tiff       : fm.js_url+'/cdn'
 	},
