@@ -672,8 +672,7 @@ class elFinderVolumeLocalFileSystem extends elFinderVolumeDriver
         if ($gid) {
             if (isset($names['gid'][$gid])) {
                 $stat['group'] = $names['gid'][$gid];
-            } else if (is_callable('posix_getgrgid')) {
-                $grgid = posix_getgrgid($gid);
+            } else if (is_callable('posix_getgrgid') && ($grgid = posix_getgrgid($gid))) {
                 $stat['group'] = $names['gid'][$gid] = $grgid['name'];
             } else {
                 $stat['group'] = $names['gid'][$gid] = $gid;
