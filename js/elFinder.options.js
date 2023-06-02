@@ -12,13 +12,13 @@ elFinder.prototype._options = {
 	 */
 	cdns : {
 		// for editor etc.
-		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14',
-		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.3',
-		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.18.0',
-		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/34.0.0',
-		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.2',
+		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.22.0',
+		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7',
+		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0',
+		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/38.0.1',
+		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.4.2',
 		simplemde  : 'https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2',
-		fabric     : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0',
+		fabric     : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1',
 		fabric16   : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7',
 		tui        : 'https://uicdn.toast.com',
 		// for quicklook etc.
