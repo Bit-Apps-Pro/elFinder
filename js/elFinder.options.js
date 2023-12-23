@@ -12,20 +12,21 @@ elFinder.prototype._options = {
 	 */
 	cdns : {
 		// for editor etc.
-		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.22.0',
+		ace        : 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.2',
 		codemirror : 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7',
-		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0',
-		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/38.0.1',
-		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.4.2',
+		ckeditor   : 'https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.22.1', // last version of Open Source Project
+		ckeditor5  : 'https://cdn.ckeditor.com/ckeditor5/40.2.0',
+		tinymce    : 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2',
 		simplemde  : 'https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2',
 		fabric     : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1',
 		fabric16   : 'https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7',
 		tui        : 'https://uicdn.toast.com',
 		// for quicklook etc.
+
 		hls        : fm.js_url+'/cdn',
 		dash       : fm.js_url+'/cdn',
 		flv        : fm.js_url+'/cdn',
-		videojs    : 'https://cdnjs.cloudflare.com/ajax/libs/video.js/8.3.0',
+		videojs    : 'https://cdnjs.cloudflare.com/ajax/libs/video.js/8.8.0',
 		prettify   : fm.js_url+'/cdn/run_prettify.js',
 		psd        : fm.js_url+'/cdn',
 		rar        : fm.js_url+'/cdn',
@@ -1345,7 +1346,7 @@ elFinder.prototype._options = {
 	 * 
 	 * @type Null|Function
 	 */
-	rawStringDecoder : typeof Encoding === 'object' && $.isFunction(Encoding.convert)? function(str) {
+	rawStringDecoder : typeof Encoding === 'object' && typeof Encoding.convert === 'function'? function(str) {
 		return Encoding.convert(str, {
 			to: 'UNICODE',
 			type: 'string'
