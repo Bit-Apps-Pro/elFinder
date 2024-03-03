@@ -4834,7 +4834,6 @@ var elFinder = function(elm, opts, bootCallback) {
 
 		// bind window onmessage for CORS
 		$(window).on('message.' + namespace, function(e){
-			res.data
 			var res = e.originalEvent || null,
 				obj, data;
 			if (res && (self.convAbsUrl(self.options.url).indexOf(res.origin) === 0 || self.convAbsUrl(self.uploadURL).indexOf(res.origin) === 0)) {
